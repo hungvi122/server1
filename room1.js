@@ -9,7 +9,7 @@ var V = SAT.Vector;
 var C = SAT.Circle;
 var quadtree = require('simple-quadtree');
 var tree = quadtree(0, 0, c.gameWidth, c.gameHeight);
-var port = 3333
+var port = process.env.PORT;
 app.get('/', function (req, res) {
   res.send('hello world ' + port);
 })
@@ -509,7 +509,7 @@ function movePlayer(player) {
         player.y = borderCalc;
     }
 }
-// di chuy?n c·c d?i th? kh·c.
+// di chuy?n c√°c d?i th? kh√°c.
 function moveFood(mass) {
     if(mass.target == undefined ){
         return;
