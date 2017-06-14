@@ -7,8 +7,7 @@ var c  = require('./config.json');
 var SAT = require('sat');
 var V = SAT.Vector;
 var C = SAT.Circle;
-var quadtree = require('simple-quadtree');
-var tree = quadtree(0, 0, c.gameWidth, c.gameHeight);
+
 var port = process.env.PORT;
 app.get('/', function (req, res) {
   res.send('hello world ' + port);
